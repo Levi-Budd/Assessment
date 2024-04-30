@@ -1,3 +1,3 @@
-amogus = input("helooooooo")
+from easygui import *
 
-print(int(amogus))
+msgbox("Hello, world!")

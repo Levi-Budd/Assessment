@@ -5,7 +5,7 @@ def num_check(question):
 
     while True:
         try:
-            response = int(input(question))
+            response = float(input(question))
             if response <= 0:
                 print("please enter a value above 0")
             else:

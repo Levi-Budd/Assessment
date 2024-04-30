@@ -6,7 +6,7 @@ def not_blank(question):
         response = input(question)
 
         if response == "":
-            print("Please input the name of the ingredient")
+            print("this cannot be blank.")
         else:
             return response
 
@@ -14,5 +14,4 @@ def not_blank(question):
 
 #this is where the main routine will go
 
-cheese = not_blank("What is the name of the ingredient? ")
-print("easy peasy.")
+Ingredient = not_blank("What is the name of the ingredient? ")
