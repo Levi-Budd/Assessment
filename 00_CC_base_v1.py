@@ -50,7 +50,7 @@ total = 0
 items = []
 
 while True:
-    servings = num_check("How many servings are there?")
+    servings = num_check("How many servings are there? ")
 
     ingredient = not_blank("What is the name of the ingredient? ")
 
@@ -65,7 +65,7 @@ while True:
     cost = calculate(list)
     print(cost)
 
-    per_serve = items / servings
+    per_serve = total / servings
 
     a = input("are you finshed? yes/no")
     if a == "yes":

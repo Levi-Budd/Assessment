@@ -1,9 +1,9 @@
-def not_blank(question):
-    response = input(question)
-    while True:
-        if question =/ question.string:
-            print("no thnak you eat ass")
+import re
 
+response = input("what is your name ")
 
+while not re.match("[a-zA-Z]", response):
+    print("Please only enter letters")
+    response = input("what is your name ")
 
-not_blank("what is your name")
+print(f"Thank you Mr. {response}") 
