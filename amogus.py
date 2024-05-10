@@ -1,5 +1,9 @@
-list = [1, 2]
+def not_blank(question):
+    response = input(question)
+    while True:
+        if question =/ question.string:
+            print("no thnak you eat ass")
 
-list.append("sussy")
 
-print(list)
+
+not_blank("what is your name")

@@ -24,23 +24,24 @@ def num_check(question):
     return response
 
 def calculate(list):
-    pkt_needed = list[3] / list[1]
-    per_pack = pkt_needed / list[2]
-    rounded = round(per_pack, 2)
+    amt_per = list[3] / list[1]
+    cost_per = list[2] / amt_per
+    rounded = round(cost_per, 2)
+
+    global total
+    total += rounded
 
     global items
-    items = 0
-    items += rounded
+    items.append(list[0]) 
     
     
     print(f"it will cost ${rounded} of {list[0]}")
-    
-    
-
-
 
 
 # here goes my test routine
+total = 0
+items = []
+
 while True:
     ingredient = not_blank("What is the name of the ingredient? ")
 
@@ -55,10 +56,10 @@ while True:
     cost = calculate(list)
     print(cost)
 
-    a = input("blah blah")
-    if a == "xxx":
-        print(items)
-
+    a = input("are you finshed? yes/no")
+    if a == "yes":
+        unpacked = ", ".join(items)
+        print(f"the ingredients are {unpacked} which comes to a total of ${total}")
 
 
 
