@@ -54,7 +54,7 @@ while True:
     list = [ingredient, amount, pkt_price, packet]
 
     cost = calculate(list)
-    print(cost)
+    
 
     a = input("are you finshed? yes/no")
     if a == "yes":

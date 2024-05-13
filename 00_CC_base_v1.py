@@ -9,7 +9,7 @@ def not_blank(question):
         response = input(question)
         
         if response == "":
-            print("this cannot be blank.")
+            print("this cannot be blank. ")
         else:
             return response
 
@@ -21,12 +21,12 @@ def num_check(question):
         try:
             response = float(input(question))
             if response <= 0:
-                print("please enter a value above 0")
+                print("please enter a value above 0 ")
             else:
                 break
 
         except ValueError:
-            print("please only enter a number.")
+            print("please only enter a number. ")
     return response
 
 #this function calculates the cost of the amount of ingredients
@@ -49,8 +49,11 @@ def calculate(list):
 total = 0
 items = []
 
+name = not_blank("What is the name of your recipe?")
+
+servings = num_check("How many servings are there? ")
+
 while True:
-    servings = num_check("How many servings are there? ")
 
     ingredient = not_blank("What is the name of the ingredient? ")
 
@@ -63,14 +66,15 @@ while True:
     list = [ingredient, amount, pkt_price, packet]
 
     cost = calculate(list)
-    print(cost)
 
-    per_serve = total / servings
+    per_serve = round(total / servings, 2)
 
-    a = input("are you finshed? yes/no")
+
+
+    a = input("are you finshed? yes/no ")
     if a == "yes":
         unpacked = ", ".join(items)
-        print(f"the ingredients are {unpacked} which comes to a total of ${total}, it will cost ${per_serve} to make {servings} servings")
+        print(f"the ingredients are {unpacked} which comes to a total of ${total}, it will cost ${per_serve} to make {servings} servings of {name}")
         break
 
 
