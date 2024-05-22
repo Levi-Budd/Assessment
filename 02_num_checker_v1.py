@@ -1,5 +1,6 @@
-#this function makes sure that an interger input does not crash,
-#and that it is more than 0
+# this function makes sure that if the input isnt a number
+# the program does not crash,
+# and that it is more than 0
 
 def num_check(question):
 
@@ -14,8 +15,9 @@ def num_check(question):
         except ValueError:
             print("please only enter a number.")
     return response
-        
-    
 
-grams = num_check("What is the amount of the ingredient in grams? ")
+
+# here the is test, it will call the function and print the output.
+
+grams = num_check("please enter a value")
 print(grams)

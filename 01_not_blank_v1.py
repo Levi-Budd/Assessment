@@ -1,3 +1,6 @@
+# this function makes sure that the program doesnt crash
+# if the user inputs nothing.
+
 def not_blank(question):
 
     while True:
@@ -8,11 +11,8 @@ def not_blank(question):
         else:
             return response
 
-#here is test
-thing = not_blank("do you like oranges?")
+# here the is test, it will call the function and print the output.
 
-if thing == "yes":
-    print("yay!")
 
-else:
-    print("sad")
+answer = not_blank("do you like oranges?")
+print(answer)
