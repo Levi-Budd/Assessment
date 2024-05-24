@@ -1,8 +1,7 @@
 # this is where my functions will go
 
-
+# this function checks if the response is not blank and returns input
 def not_blank(question):
-    # this function checks if the response is not blank and returns input
     while True:
         response = input(question)
 
@@ -12,8 +11,8 @@ def not_blank(question):
             return response
 
 
+# this function only accepts floats and returns input
 def num_check(question):
-    # this function only accepts floats and returns input
     while True:
         try:
             response = float(input(question))
@@ -27,9 +26,9 @@ def num_check(question):
     return response
 
 
+# this function calculates the cost of the amount of ingredients
+# it then and appends to "list"
 def calculate(list):
-    # this function calculates the cost of the amount of ingredients
-    # it then and appends to "list"
     amt_per = list[3] / list[1]
     cost_per = list[2] / amt_per
     rounded = round(cost_per, 2)
@@ -43,8 +42,8 @@ def calculate(list):
     print(f"it will cost ${rounded} of {list[0]}")
 
 
+# this function makes sure an input is only yes or no, and returns yes/no.
 def yes_no(question):
-    # this function makes sure an input is only yes or no, and returns yes/no.
     while True:
         response = input(question).lower()
 
@@ -75,11 +74,11 @@ while True:
 
     amount = num_check("how many grams of this is needed? ")
 
-    pkt_price = num_check("how much does a bought packet of this\
-                        ingredient cost? ")
+    pkt_price = num_check("how much does a bought packet of this " \
+                          "ingredient cost? ")
 
-    packet = num_check("How many grams is inside a bought packet of this\
-                        ingredient? ")
+    packet = num_check("How many grams is inside a bought packet of this " \
+                       "ingredient? ")
 
     list = [ingredient, amount, pkt_price, packet]
 
@@ -91,8 +90,10 @@ while True:
     finished = yes_no("are you finshed? yes/no ")
     if finished == "yes":
         unpacked = ", ".join(items)
-        print(f"the ingredients are {unpacked} which comes to a total of ${total},\
-            it will cost ${per_serve} to make {servings} servings of {name}")
+        print(f"the ingredients are {unpacked} which comes to a total of ${total} "\
+               f"it will cost ${per_serve} to make "\
+                  f"{servings} servings of {name}")
         break
     elif finished == "no":
         continue
+    

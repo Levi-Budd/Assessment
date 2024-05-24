@@ -32,11 +32,11 @@ while True:
 
     amount = float(input("how many grams of this is needed? "))
 
-    pkt_price = float(input("how much does a bought packet of this\
-                             ingredient cost? "))
+    pkt_price = float(input("how much does a bought packet of this "\
+                             "ingredient cost? "))
 
-    packet = float(input("How many grams is inside a bought packet of this\
-                          ingredient? "))
+    packet = float(input("How many grams is inside a bought packet of this "\
+                          "ingredient? "))
 
     list = [ingredient, amount, pkt_price, packet]
 

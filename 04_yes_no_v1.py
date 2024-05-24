@@ -1,7 +1,7 @@
 
+# this function makes sure an input is only yes or no, and returns yes/no.
 
 def yes_no(question):
-    # this function makes sure an input is only yes or no, and returns yes/no.
     while True:
         response = input(question).lower()
 
